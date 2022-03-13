@@ -4,7 +4,6 @@ import { Language } from './Language';
 export const Languages = () => {
 	const GoToTheLeft = (e) => {
 		const carrouselLanguages = document.getElementById('languages');
-		carrouselLanguages.scrollLeft -= carrouselLanguages.offsetWidth;
 		if (carrouselLanguages.scrollLeft <= 0) {
 			document.getElementById('btn-left').style.display = 'none';
 		} else {
@@ -18,6 +17,7 @@ export const Languages = () => {
 		} else {
 			document.getElementById('btn-right').style.display = 'flex';
 		}
+		carrouselLanguages.scrollLeft -= carrouselLanguages.offsetWidth;
 		console.log(carrouselLanguages.scrollLeft);
 		// alert(
 		// 	carrouselLanguages.scrollLeft +
@@ -35,7 +35,6 @@ export const Languages = () => {
 
 	const GoToTheRight = async (e) => {
 		const carrouselLanguages = document.getElementById('languages');
-		carrouselLanguages.scrollLeft += await carrouselLanguages.offsetWidth;
 		console.log(carrouselLanguages.scrollLeft);
 		if (carrouselLanguages.scrollLeft === 0) {
 			document.getElementById('btn-left').style.display = 'none';
@@ -50,6 +49,7 @@ export const Languages = () => {
 		} else {
 			document.getElementById('btn-right').style.display = 'flex';
 		}
+		carrouselLanguages.scrollLeft += carrouselLanguages.offsetWidth;
 		// alert(
 		// 	carrouselLanguages.scrollLeft +
 		// 		'- ' +
