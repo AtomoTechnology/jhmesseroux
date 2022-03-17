@@ -11,8 +11,9 @@ const Contacts = () => {
           <form action="">
             <h3 className="my-4 text-2xl text-gradient">Contact US</h3>
             <fieldset className="flex gap-0 p-0 m-0">
-              <input type="text" placeholder="Email | Phone Number " name="name" />
-              <button className="btn !bg-blue-500 text-white font-bold"> Contact</button>
+              <label>Name | Company </label>
+              <input type="text" placeholder="Name or Company's name " name="name" />
+              <button className="btn btn-yellow text-white font-bold"> Contact</button>
             </fieldset>
             <span className="text-sm text-gray-900 ">Leave your data and we'll contac you later...</span>
           </form>

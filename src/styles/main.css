@@ -81,14 +81,19 @@ textarea {
   resize: none;
   /* width: 90%; */
 }
-/* 
+textarea {
+  min-height: 150px;
+}
+
 fieldset {
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 0.6rem;
   margin: 0.5rem 0px;
-} */
+  flex-direction: column;
+}
 
 .text-gradient {
   /* font-size: 72px; */
@@ -109,6 +114,10 @@ label {
 .btn-blue {
   color: white;
   background-color: #0072cf;
+}
+.btn-yellow {
+  background: #ff9800;
+  color: #033d54;
 }
 .container {
   width: 90%;

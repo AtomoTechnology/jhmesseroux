@@ -7,11 +7,13 @@ import Projects from './components/Projects';
 import Educations from './components/Educations';
 import Contacts from './components/Contacts';
 import PreFooter from './components/PreFooter';
+import Clients from './components/Clients';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Clients />
       <Languages />
       <Educations />
       <Contacts />

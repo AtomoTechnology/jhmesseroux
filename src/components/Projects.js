@@ -32,8 +32,27 @@ const Projects = () => {
         </div>
         <div className="projects-grid items-center justify-center gap-4 p-8 grid grid-t-500">
           {projects.map((p) => (
-            <div className="project flex cursor-pointer   shadow-md bg-white rounded-sm">
-              <div className="img-project  object-cover">
+            <div className="project flex cursor-pointer    shadow-md bg-white rounded-sm">
+              <div className="img-project relative  object-cover">
+                <div className="overlay  hidden absolute top-0 left-0 w-full h-full gap-4 justify-center items-center">
+                  <a
+                    data-tooltip="Back End"
+                    className=" tooltip red w-8 h-8 !rounded-full  flex items-center bg-white text-blue-500 justify-center shadow-2xl"
+                    href="#"
+                  >
+                    <BsGithub />
+                  </a>
+                  <a
+                    data-tooltip="Front End"
+                    className=" tooltip red w-8 h-8 !rounded-full  flex items-center bg-white text-blue-700 justify-center shadow-2xl"
+                    href="#"
+                  >
+                    <BsGithub />
+                  </a>
+                  <button to="" className="btn">
+                    <a href="">See Demo</a>
+                  </button>
+                </div>
                 <img src={p.photo} alt={p.title} className="object-cover h-full " />
               </div>
               <div className="project-body flex flex-col gap-4 bg-gray-100 p-6">

@@ -129,10 +129,10 @@
 }
 .menu-mobile {
   display: none;
-  width: 80%;
+  width: 300px;
   background-color: var(--color);
   padding: 10px;
-  position: absolute;
+  position: fixed;
   left: 0;
   height: 100vh;
   z-index: 5;
@@ -292,15 +292,20 @@
 .project:hover {
   transform: translateY(10px);
   border-radius: 0.5rem !important;
-  /* width: 110%; */
-  /* display: flex; */
+}
+.project .img-project:hover .overlay {
+  display: flex;
 }
 .project .img-project {
   width: 350px;
+  transition: 900ms all;
+
   /* height: 200px; */
 }
-.project .project-body {
-  /* width: 350px; */
+.project .overlay {
+  background-color: #050102b8;
+  height: 100%;
+  transition: 900ms all;
 }
 /* .projects {
   padding: 5px;
@@ -453,6 +458,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .menu-mobile {
+    width: 80%;
+  }
   .projects-grid,
   .educations-grid {
     padding: 0.5rem;
@@ -469,5 +477,8 @@
   .grid-t-250,
   .grid-t-400 {
     grid-template-columns: 1fr;
+  }
+  .wrapper-footer {
+    padding: 0.5rem;
   }
 }
