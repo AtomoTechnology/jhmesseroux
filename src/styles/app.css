@@ -452,10 +452,23 @@
 }
 .menu-hamberger {
   display: none;
+  position: relative;
+  /* background: white; */
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 /* media query */
 
 @media (max-width: 380px) {
+  .email-box-footer {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 600px) {
   .menu-bottom-fixed {
@@ -464,6 +477,10 @@
   }
   .footer {
     margin-bottom: 3rem;
+    display: none;
+  }
+  .wrapper-footer {
+    margin-bottom: 4rem;
   }
   .menu-list {
     display: none;

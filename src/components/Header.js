@@ -3,6 +3,7 @@ import { BsFacebook } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { BsYoutube } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
+import jhm from './../images/jhmwebsitewhite.png';
 
 import cv from './../data/CV.pdf';
 export const Header = () => {
@@ -67,27 +68,19 @@ export const Header = () => {
         <div
           onClick={toggleMenu}
           // style={{ display: 'none' }}
-          className="menu-hamberger"
+          className="menu-hamberger mr-3"
         ></div>
       </div>
 
       <div className="header  bg-gradient" id="header">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/HsbsMrIXPMA?controls=0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <div className="menu">
+        <div className="menu p-1">
           <div className="flex ">
             <div
               onClick={toggleMenu}
               // style={{ display: 'none' }}
-              className="menu-hamberger"
+              className="menu-hamberger !hidden"
             ></div>
+            <img src={jhm} width="170" alt="LOGO JHM" />
             <ul className="menu-list ml-4">
               <li>
                 <a href="/ghgh"> Skills </a>
@@ -102,7 +95,7 @@ export const Header = () => {
           </div>
 
           <img
-            className="bg-white p-1 rounded-full shadow border-2 hover:bg-gray-100 hover:p-0 duration-300 cursor-pointer "
+            className="bg-white p-1 mx-4 rounded-full shadow border-2 hover:bg-gray-100 hover:p-0 duration-300 cursor-pointer "
             src="../assets/img/hilaire.png"
             width="50"
             alt=""

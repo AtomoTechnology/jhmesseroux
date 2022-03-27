@@ -19,7 +19,7 @@ const PreFooter = () => {
               <label className="min-w-fit">Location : </label>
               <span>Rosario , Santa Fe Argentina</span>
             </p>
-            <p className="flex text-sm gap-2 justify-between">
+            <p className="flex email-box-footer text-sm gap-2 justify-between">
               <label className="min-w-fit">Email : </label>
               <span>jhmesseroux.developer@gmail.com</span>
             </p>

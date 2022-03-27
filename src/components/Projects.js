@@ -9,19 +9,20 @@ const Projects = () => {
       id: 1,
       title: 'Nova Technology',
       description: 'online cell phone sales and repair system',
-      photo: novatech,
+      photo: 'https://res.cloudinary.com/draxircbk/image/upload/v1648419927/jhmesseroux/nova_1_grisox.png',
       tags: 'Web | Fullstack | Nodejs | Reactjs',
     },
     {
       id: 2,
       title: 'UTN school system ',
       description: 'online cell phone sales and repair system',
-      photo: novatech,
+      photo:
+        'https://res.cloudinary.com/draxircbk/image/upload/v1648420382/jhmesseroux/students-with-laptop-medium-shot_1_ddhuvg.jpg',
       tags: 'Desktop | Fullstack | C# | ASP.net',
     },
   ];
   return (
-    <div className="bg-blue-500 projectx">
+    <div className="bg-blue-500 projects mt-4">
       <div className="container">
         <div className="flex gap-4 my-4 items-center ">
           <MdComputer
