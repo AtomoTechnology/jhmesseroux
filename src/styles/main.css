@@ -45,10 +45,6 @@ ul li a {
   transform: scale(1.1);
   transform: skew(-5deg, -3deg);
 }
-.container {
-  width: 90%;
-  margin: auto;
-}
 
 .red {
   transition: 300px all;
@@ -96,7 +92,7 @@ fieldset {
 .text-gradient {
   /* font-size: 72px; */
   background: -webkit-linear-gradient(rgb(72, 178, 248), rgb(0, 127, 247));
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .bg-gradient {
@@ -118,10 +114,10 @@ label {
   color: #033d54;
 }
 .container {
-  width: 90%;
-  padding: 5px;
+  width: 90% !important;
+  padding: 5px !important;
   /* background-color: rgb(187, 18, 18); */
-  margin: auto;
+  margin: auto !important;
 }
 .grid-t-300 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -175,10 +171,10 @@ label {
   margin: 0 0.5rem;
 
   color: white;
-  padding: 0.5rem;
+  padding: 0.4rem;
   border-radius: 0.3rem;
   text-align: center;
-  width: fit-content;
+  width: max-content;
   /* max-width: 100%; */
   background: var(--tooltip-color);
 }

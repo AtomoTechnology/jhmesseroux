@@ -7,6 +7,7 @@ import jhm from './../images/jhmwebsitewhite.png';
 
 import cv from './../data/CV.pdf';
 export const Header = () => {
+  const avatar = 'https://res.cloudinary.com/draxircbk/image/upload/v1649478136/jhmesseroux/hilaire_qzluvj.jpg';
   const toggleMenu = (e) => {
     // e.target.classList.toggle('active');
     document.querySelector('.menu-hamberger').classList.toggle('active');
@@ -39,13 +40,13 @@ export const Header = () => {
           </span>
           <ul className="menu-list-mobile">
             <li>
-              <a href="/ghgh"> Skills </a>
+              <a href="#skills"> Skills </a>
             </li>
             <li>
-              <a href="#languages"> Lenguages </a>
+              <a href="#languages"> Languages </a>
             </li>
             <li>
-              <a href="#footer"> Projects </a>
+              <a href="#projects"> Projects </a>
             </li>
           </ul>
         </div>
@@ -56,13 +57,13 @@ export const Header = () => {
       >
         <ul className="flex justify-between gap-3 items-center">
           <li>
-            <a href="/ghgh"> Skills </a>
+            <a href="#skills"> Skills </a>
           </li>
           <li>
-            <a href="#languages"> Lenguages </a>
+            <a href="#languages"> Languages </a>
           </li>
           <li>
-            <a href="#footer"> Projects </a>
+            <a href="#projects"> Projects </a>
           </li>
         </ul>
         <div
@@ -80,23 +81,25 @@ export const Header = () => {
               // style={{ display: 'none' }}
               className="menu-hamberger !hidden"
             ></div>
-            <img src={jhm} width="170" alt="LOGO JHM" />
+            <a href="/">
+              <img src={jhm} width="170" alt="LOGO JHM" />
+            </a>
             <ul className="menu-list ml-4">
               <li>
-                <a href="/ghgh"> Skills </a>
+                <a href="#skills"> Skills </a>
               </li>
               <li>
-                <a href="#languages"> Lenguages </a>
+                <a href="#languages"> Languages </a>
               </li>
               <li>
-                <a href="#footer"> Projects </a>
+                <a href="#projects"> Projects </a>
               </li>
             </ul>
           </div>
 
           <img
             className="bg-white p-1 mx-4 rounded-full shadow border-2 hover:bg-gray-100 hover:p-0 duration-300 cursor-pointer "
-            src="../assets/img/hilaire.png"
+            src={avatar}
             width="50"
             alt=""
           />

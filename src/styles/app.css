@@ -157,41 +157,54 @@
 /* languages carrousel  */
 
 .languages {
-  background: white;
+  /* background: white; */
   padding: 10px;
   display: flex;
   position: relative;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  justify-items: center;
+  /* align-content: center; */
+  /* justify-items: center; */
   gap: 1rem;
+  flex-wrap: wrap;
   /* overflow-x: scroll; */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.4); */
   scroll-behavior: smooth;
 }
 .language {
-  min-width: 300px;
-  /* max-width: 300px; */
-  background: white;
-  padding: 5px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 1rem;
-  gap: 1rem;
-  border-radius: 3px;
-  box-shadow: var(--shadow);
+  min-width: 200px;
+  max-width: 300px;
+  /* background: rgb(252, 251, 251); */
+  border-top: 5px solid var(--color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 3fr; */
+  /* gap: 1rem; */
+  /* border-radius: 3px; */
+  /* box-shadow: var(--shadow); */
   cursor: pointer;
-  transition: 500ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+.language .header-language {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
 }
 .language:hover {
-  box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.306);
+  background: rgb(0, 169, 255);
+  background: linear-gradient(156deg, rgba(0, 169, 255, 1) 0%, rgba(0, 124, 209, 1) 91%);
+  color: white;
+  border: none;
 }
 
 .language .body {
-  padding: 3px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -207,19 +220,22 @@
   gap: 0.6rem;
   background-color: rgba(0, 0, 0, 0.034);
   padding: 2px 5px;
-  border-radius: 50px;
-  color: var(--color);
-  border: 0.2px solid #e9e7e7;
-  font-weight: 400;
+  border-radius: 2px;
+  color: rgb(3, 32, 53);
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid rgb(1, 155, 239);
+  /* font-weight: 400; */
   text-align: center;
   transition: 300ms;
+  /* box-sizing: content-box; */
 }
 .language .body .detail > span:hover {
-  background-color: rgba(0, 0, 0, 0.055);
-  border: 0.2px solid #ce2d2d;
+  background-color: rgb(1, 155, 239);
+  /* border-bottom: 2px solid rgb(1, 155, 239); */
+  color: white;
 }
 .language img {
-  width: 100px;
+  width: 40px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -298,6 +314,9 @@
 .project:hover {
   transform: translateY(10px);
   border-radius: 0.5rem !important;
+}
+.project:hover h3 {
+  text-decoration: underline;
 }
 .project .img-project:hover .overlay {
   display: flex;
@@ -474,6 +493,10 @@
   .menu-bottom-fixed {
     display: flex;
     animation: botomtotop 1s forwards;
+  }
+  .language {
+    width: 95%;
+    margin: auto;
   }
   .footer {
     margin-bottom: 3rem;

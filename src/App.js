@@ -8,6 +8,7 @@ import Educations from './components/Educations';
 import Contacts from './components/Contacts';
 import PreFooter from './components/PreFooter';
 import Clients from './components/Clients';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Languages />
       <Educations />
       {/* <Contacts /> */}
+      <Skills />
       <Projects />
       <PreFooter />
       <Footer />

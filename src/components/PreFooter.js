@@ -16,16 +16,20 @@ const PreFooter = () => {
           <span>Fullstack Developer </span>
           <div className="info flex flex-col gap-3">
             <p className="flex text-sm gap-2 justify-between">
-              <label className="min-w-fit">Location : </label>
-              <span>Rosario , Santa Fe Argentina</span>
+              <label className="min-w-fit">Phone/Whatsapp : </label>
+              <span>
+                <a href="https://wa.me/qr/CIJXPXIZCC2KO1">+5493417207882</a>
+              </span>
             </p>
             <p className="flex email-box-footer text-sm gap-2 justify-between">
               <label className="min-w-fit">Email : </label>
-              <span>jhmesseroux.developer@gmail.com</span>
+              <span className="underline">
+                <a href="mailto: jhmesseroux.developer@gmail.com">jhmesseroux.developer@gmail.com</a>
+              </span>
             </p>
             <p className="flex text-sm gap-2 justify-between">
               <label className="min-w-fit">Location : </label>
-              <span>Rosario , Santa Fe Argentina</span>
+              <span>Rosario,Santa Fe,Argentina</span>
             </p>
           </div>
           <div className="red-socials flex gap-3 mt-4 ">
@@ -77,7 +81,13 @@ const PreFooter = () => {
             <textarea type="text" placeholder="type your message" required name="message"></textarea>
           </fieldset>
           <fieldset>
-            <button className="btn btn-yellow text-white font-bold"> Contact</button>
+            <button
+              data-tooltip="Implementing..."
+              disabled
+              className="btn tooltip btn-yellow !bg-gray-400 text-white font-bold"
+            >
+              Contact
+            </button>
           </fieldset>
         </form>
         {/* <div className="img flex   items-center justify-center">
