@@ -8,9 +8,12 @@
 
 /* header */
 .header {
-  background-color: #35a4ff;
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
+  margin-top: 60px;
   padding-bottom: 2rem;
+}
+.header .wrapper {
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
+  background-color: #35a4ff;
 }
 .header::before {
   content: '';
@@ -45,6 +48,10 @@
   background: #35a4ff;
   width: 100%;
   right: 0;
+  position: fixed;
+  height: 60px;
+  z-index: 1000;
+  transition: 500ms ease-in-out;
 }
 .menu a {
   color: white;
@@ -431,7 +438,17 @@
   width: 240px;
   display: none;
 }
-
+.success {
+  animation: successA 2s alternate backwards;
+}
+@keyframes successA {
+  0% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .lan {
   padding: 2px 8px;
   border-radius: 50px;

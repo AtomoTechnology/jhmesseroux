@@ -6,13 +6,13 @@ export const Footer = () => {
       <div className="container">
         <ul className="footer-menu-list">
           <li>
-            <a href="/ghgh"> Skills </a>
+            <a href="#skills"> Skills </a>
           </li>
           <li>
-            <a href="/yuyujyhj"> Lenguages </a>
+            <a href="#languages"> Lenguages </a>
           </li>
           <li>
-            <a href="/uyugh"> Projects </a>
+            <a href="#projects"> Projects </a>
           </li>
         </ul>
       </div>

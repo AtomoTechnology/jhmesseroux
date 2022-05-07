@@ -6,6 +6,7 @@ import { BsInstagram } from 'react-icons/bs';
 import jhm from './../images/jhmwebsitewhite.png';
 
 import cv from './../data/CV.pdf';
+import { useLayoutEffect } from 'react';
 export const Header = () => {
   const avatar = 'https://res.cloudinary.com/draxircbk/image/upload/v1649478136/jhmesseroux/hilaire_qzluvj.jpg';
   const toggleMenu = (e) => {
@@ -16,13 +17,6 @@ export const Header = () => {
   const toggleMenuMobil = (e) => {
     document.querySelector('.menu-hamberger').classList.toggle('active');
     document.querySelector('#menu-mobile').classList.toggle('hidden');
-  };
-  // document.onClick((e) => {
-  // 	alert('hi');
-  // });
-  document.onClick = () => {
-    console.log('uiu');
-    alert('hi');
   };
   return (
     <>
@@ -73,8 +67,8 @@ export const Header = () => {
         ></div>
       </div>
 
-      <div className="header  bg-gradient" id="header">
-        <div className="menu p-1">
+      <div className="header  " id="header">
+        <div id="menuHideShow" className="menu p-1">
           <div className="flex ">
             <div
               onClick={toggleMenu}
@@ -104,7 +98,7 @@ export const Header = () => {
             alt=""
           />
         </div>
-        <div className="wrapper text-white gap-12 grid-cols-1 grid sm:grid-cols-2 items-center justify-around p-4  ">
+        <div className="wrapper bg-gradient text-white gap-12 grid-cols-1 grid sm:grid-cols-2 items-center justify-around p-4  ">
           <div className="about-me flex flex-col gap-4 ">
             <h3 className="text-3xl title-name">Hi, I am Messeroux jn. Hilaire</h3>
             <p className="description">
@@ -157,3 +151,15 @@ export const Header = () => {
     </>
   );
 };
+
+var lastScroll = 0;
+window.addEventListener('scroll', () => {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScroll) {
+    document.getElementById('menuHideShow').style.top = '-60px';
+  } else {
+    document.getElementById('menuHideShow').style.top = '0px';
+  }
+
+  lastScroll = scrollTop;
+});

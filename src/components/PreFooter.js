@@ -3,8 +3,42 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { BsYoutube } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import avatar from './../images/hilaire.png';
+import sanityClient from './../sanity/client';
+
+import { useState } from 'react';
 
 const PreFooter = () => {
+  const [message, setMessage] = useState({
+    _type: 'contactss',
+    // date: new Date().getDate(),
+    email: '',
+    name: '',
+    subject: '',
+    message: '',
+  });
+  const [loading, setLoading] = useState(false);
+  const sendMessage = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    sanityClient
+      .create(message)
+      .then((res) => {
+        document.querySelector('.success').style.display = 'block';
+        setMessage({
+          _type: 'contact',
+          email: '',
+          name: '',
+          subject: '',
+          message: '',
+        });
+        setTimeout(() => {
+          document.querySelector('.success').style.display = 'none';
+        }, 5000);
+      })
+      .catch((error) => console.log(error));
+    setLoading(false);
+  };
+
   return (
     <div className="wrapper-footer  p-8">
       <h3 className="text-3xl text-white font-bold title-name">Reach Out to me!</h3>
@@ -66,27 +100,62 @@ const PreFooter = () => {
             Download my resume
           </a>
         </div>
-        <form action="">
+        <form onSubmit={sendMessage} action="">
           <h3 className="my-4 text-2xl text-white font-bold">Contact US</h3>
+
           <fieldset className="">
             <label>Name | Company </label>
-            <input type="text" placeholder="Name or Company's name " name="name" />
+            <input
+              value={message.name}
+              onChange={(e) => setMessage({ ...message, name: e.target.value })}
+              type="text"
+              placeholder="Name or Company's name "
+              name="name"
+              required
+            />
+          </fieldset>
+          <fieldset className="">
+            <label>Email </label>
+            <input
+              value={message.email}
+              onChange={(e) => setMessage({ ...message, email: e.target.value })}
+              type="email"
+              placeholder="type your email"
+              name="email"
+              required
+            />
           </fieldset>
           <fieldset>
             <label htmlFor="subject">Subject</label>
-            <input type="text" placeholder="type your subject" required name="subject" />
+            <input
+              value={message.subject}
+              onChange={(e) => setMessage({ ...message, subject: e.target.value })}
+              type="text"
+              placeholder="type your subject"
+              required
+              name="subject"
+            />
           </fieldset>
           <fieldset>
             <label htmlFor="message">Message</label>
-            <textarea type="text" placeholder="type your message" required name="message"></textarea>
+            <textarea
+              value={message.message}
+              onChange={(e) => setMessage({ ...message, message: e.target.value })}
+              type="text"
+              placeholder="type your message"
+              required
+              name="message"
+            ></textarea>
+          </fieldset>
+          <fieldset
+            style={{ display: 'none', background: 'rgba(0, 0, 0, 0.4)' }}
+            className="success font-bold  my-4 border-l-8 text-center border-green-400 text-white p-3 shadow-md"
+          >
+            Success! Message sent successfully...
           </fieldset>
           <fieldset>
-            <button
-              data-tooltip="Implementing..."
-              disabled
-              className="btn tooltip btn-yellow !bg-gray-400 text-white font-bold"
-            >
-              Contact
+            <button type="submit" disabled={loading} className="btn !bg-blue-600   text-gray-200 font-bold">
+              {loading ? 'Wait...' : 'Contact Us'}
             </button>
           </fieldset>
         </form>

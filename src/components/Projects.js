@@ -10,8 +10,8 @@ const Projects = () => {
       description: 'online cell phone sales and repair system',
       photo: 'https://res.cloudinary.com/draxircbk/image/upload/v1648419927/jhmesseroux/nova_1_grisox.png',
       tags: 'Web | Fullstack | Nodejs | Reactjs',
-      gitFront: 'https://github.com/AtomoTechnology/Nova-front',
-      gitBack: 'https://github.com/AtomoTechnology/Nova-back',
+      // gitFront: 'https://github.com/AtomoTechnology/Nova-front',
+      // gitBack: 'https://github.com/AtomoTechnology/Nova-back',
     },
     {
       id: 2,
